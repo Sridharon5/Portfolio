@@ -3,7 +3,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { ProjectsComponent} from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { HireComponent } from './pages/hire/hire.component';
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
@@ -12,7 +11,6 @@ export const routes: Routes = [
     { path: 'resume', component: ResumeComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
-    { path: 'hire', component: HireComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
   

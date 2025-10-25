@@ -1,40 +1,39 @@
-
-  
-  .nav-link,
-  .btn-custom {
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
-  }
-
-  .nav-link:hover {
-    color: #17a2b8 !important;
-  }
-
-  /* Custom Button Styling */
-  .btn-custom {
-    background-color: transparent;
+.navbar {
+  background-color: #43c9f7;
+}
+.nav-item {
+  .nav-box {
+    border: 0.09rem solid white;
+    border-radius: 0.5rem;
     color: white;
-    border: 2px solid #28a745;
-    font-weight: bold;
-  }
 
-  .btn-custom:hover {
-    background-color: #28a745;
-    color: white !important;
-    box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.5);
-  }
-  
-  /* Mobile Optimization */
-  @media (max-width: 991px) {
-    .navbar-nav {
-      text-align: center;
+    &.active {
+      background-color: blue !important;  
     }
 
-    .nav-link {
-      padding: 10px;
+    .nav-box-item {
+      padding: 0.5rem 0.7rem;
+      color:white;
+    }
+    a {
+      text-decoration: none;
     }
   }
+}
+.hire-box {
+    border: 0.09rem solid white;
+    border-radius: 0.5rem;
+    color: white;
 
+    &.active {
+      background-color: blue !important;  
+    }
+
+    .nav-box-item {
+      padding: 0.25rem 0.5rem;
+      color:white;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
