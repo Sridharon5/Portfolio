@@ -1,0 +1,40 @@
+
+  
+  .nav-link,
+  .btn-custom {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .nav-link:hover {
+    color: #17a2b8 !important;
+  }
+
+  /* Custom Button Styling */
+  .btn-custom {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #28a745;
+    font-weight: bold;
+  }
+
+  .btn-custom:hover {
+    background-color: #28a745;
+    color: white !important;
+    box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Mobile Optimization */
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+
+    .nav-link {
+      padding: 10px;
+    }
+  }
+
