@@ -1,20 +1,22 @@
-.container{
-   text-align: center;
-    display:grid;
-    row-gap: 10%;
-    margin-top:6%;
-    margin-left: 9%;
+.container-fluid {
+  display: flex;
+  gap:4rem;
 }
-.row1{
-    display: grid;
+.contact-block {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  .contact-details {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    align-items: flex-start;
+   
+  }
 }
-.phone{
-    margin:10%
-}
-body{
-    background-color: #fceed1;
-}
-.my{
-    border: 8px solid;
-    
+.message-block {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
