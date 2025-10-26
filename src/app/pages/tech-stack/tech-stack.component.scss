@@ -1,0 +1,38 @@
+.tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color:#f8f9ff;
+  border-radius:1rem;
+}
+
+.tech-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  width: 375px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tech-card h4 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-list li {
+  flex: 0 0 29%; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
