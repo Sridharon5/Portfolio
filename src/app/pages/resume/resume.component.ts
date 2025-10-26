@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './resume.component.scss'
 })
 export class ResumeComponent {
-
+   downloadResume() {
+    const link = document.createElement('a');
+    link.href = '/pdfs/sridhar-resume.pdf'; 
+    link.download = 'Maloth_Sridhar_Varma_Resume.pdf';
+    link.click();
+  }
 }
