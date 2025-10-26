@@ -22,7 +22,7 @@ export class NavbarComponent {
   }
   navItems = [
     { label: 'Home', link: '/home' },
-    { label: 'Tech Stacks', link: '/about' },
+    { label: 'Tech Stacks', link: '/tech-stack' },
     { label: 'Projects', link: '/projects' },
     { label: 'Resume', link: '/resume' },
   ];
