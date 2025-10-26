@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="contact-block">
-    <h2>Get in Touch</h2>
-    <h4>Drop me a line, give me a call, or send me a message by submitting the form</h4>
+    <h4>Get in Touch</h4>
+    <h6>Drop me a line, give me a call, or send me a message by submitting the form</h6>
     <div class="contact-details">
       <i class="bi bi-telephone-forward fs-3"></i>
       <p>7981841338</p>
@@ -12,40 +12,52 @@
     </div>
   </div>
 
-  <div class="message-block">
-    <h3>Message Me</h3>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"
-        ><strong>Name</strong></label
-      >
-      <input
-        type="text"
-        class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="Please enter your name"
-      />
+  <div class="message-block" >
+    <h4 class="mb-0">Message Me</h4>
+    <div *ngIf="statusMessage" [ngStyle]="{ 'color': 'red', 'font-weight': '500' }">
+      {{statusMessage}}
     </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput2" class="form-label"
-        ><strong>Email</strong></label
-      >
-      <input
-        type="email"
-        class="form-control"
-        id="exampleFormControlInput2"
-        placeholder="Please enter your email"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label"
-        ><strong>Message</strong></label
-      >
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div>
-    <button type="button" class="btn btn-primary w-100">Send Message</button>
+    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+      <div class="mb-2">
+        <label for="name" class="form-label"><strong>Name</strong></label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          ngModel
+          placeholder="Please enter your name"
+          required
+        />
+      </div>
+
+      <div class="mb-2">
+        <label for="email" class="form-label"><strong>Email</strong></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          ngModel
+          placeholder="Please enter your email"
+          required
+        />
+      </div>
+
+      <div class="mb-2">
+        <label for="message" class="form-label"><strong>Message</strong></label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="3"
+          ngModel
+          placeholder="Type your message here..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
   </div>
 </div>
