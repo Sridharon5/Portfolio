@@ -1,41 +1,87 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid px-4">
-    <!-- Left side: Brand -->
-    <a class="navbar-brand fw-bold text-uppercase">Maloth Sridhar Varma</a>
-     <button
-      class="navbar-toggler"
+<nav
+  class="fixed top-0 z-50 w-full border-b border-white/10 bg-[color:var(--color-nav-bg)] shadow-nav backdrop-blur-xl backdrop-saturate-150"
+  aria-label="Main"
+>
+  <div
+    class="relative mx-auto flex w-full min-w-0 max-w-7xl flex-wrap items-center justify-between gap-3 px-3 py-2.5 sm:px-4"
+  >
+    <span
+      class="shrink-0 select-none bg-gradient-to-r from-aurora-violet to-aurora-cyan bg-clip-text text-sm font-bold uppercase tracking-[0.12em] text-transparent sm:text-base"
+    >
+      Maloth Sridhar Varma
+    </span>
+
+    <button
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
+      class="inline-flex items-center justify-center rounded-lg border border-white/10 bg-void-elevated/80 p-2 text-void-text transition hover:border-aurora-violet/40 hover:bg-void-elevated hover:text-white md:hidden"
+      (click)="menuOpen = !menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="navbar-links"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        @if (menuOpen) {
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        } @else {
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        }
+      </svg>
     </button>
-    <!-- Center: Navigation items -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav gap-5">
-        <li class="nav-item" *ngFor="let item of navItems; let i = index">
-          <div
-            class="nav-box"
-            [class.active]="activeIndex === i"
-            (click)="setActive(i)"
-          >
-            <a class="nav-box-item" [routerLink]="item.link">
-              {{ item.label }}
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
 
-    <div
-  class="hire-box get-in-touch ms-auto"
-  [class.active]="activeIndex === 4"
-  (click)="setActive(4)"
->
-  <a class="nav-box-item" [routerLink]="'/contact'">Get In Touch</a>
-</div>
+    <ul
+      id="navbar-links"
+      class="order-last flex w-full min-w-0 flex-col gap-0.5 border-t border-white/10 bg-[color:var(--color-nav-bg-mobile)] py-3 md:order-none md:flex md:w-auto md:min-w-0 md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-0.5 md:border-0 md:bg-transparent md:py-0 lg:gap-1"
+      [class.max-md:hidden]="!menuOpen"
+    >
+      @for (item of navItems; track item.link) {
+        <li class="px-2 md:px-0">
+          <a
+            [routerLink]="item.link"
+            routerLinkActive="bg-gradient-to-r from-aurora-violet to-aurora-cyan text-white shadow-glow hover:from-aurora-violet hover:to-aurora-cyan"
+            [routerLinkActiveOptions]="{ exact: item.link === '/home' }"
+            class="block rounded-lg px-4 py-2 text-left text-sm font-medium text-void-muted transition-colors duration-200 hover:bg-white/5 hover:text-void-text md:inline-block"
+            (click)="menuOpen = false"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+    <a
+      routerLink="/contact"
+      routerLinkActive="ring-2 ring-aurora-cyan/60 ring-offset-2 ring-offset-void-bg"
+      class="hidden shrink-0 whitespace-nowrap rounded-lg bg-gradient-to-r from-aurora-violet to-aurora-cyan px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 hover:shadow-glow-cyan md:inline-flex md:items-center"
+      (click)="menuOpen = false"
+    >
+      Get In Touch
+    </a>
+  </div>
+
+  <div
+    class="border-t border-white/10 bg-[color:var(--color-nav-bg-mobile)] px-3 py-2.5 backdrop-blur-xl md:hidden"
+    [class.hidden]="!menuOpen"
+  >
+    <div class="mb-3 flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Social profiles">
+      @for (s of socials; track s.href) {
+        <a
+          [href]="s.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-void-elevated/50 px-3 py-2 text-xs font-medium text-void-text transition hover:border-aurora-cyan/35"
+          [attr.aria-label]="s.label + ' (opens in a new tab)'"
+          (click)="menuOpen = false"
+        >
+          <app-social-icon [kind]="s.icon" className="text-sm text-aurora-cyan" />
+          {{ s.label }}
+        </a>
+      }
+    </div>
+    <a
+      routerLink="/contact"
+      class="block w-full rounded-lg bg-gradient-to-r from-aurora-violet to-aurora-cyan py-2.5 text-center text-sm font-semibold text-white transition hover:opacity-95"
+      (click)="menuOpen = false"
+    >
+      Get In Touch
+    </a>
   </div>
 </nav>

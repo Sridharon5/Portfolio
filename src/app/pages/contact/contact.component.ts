@@ -1,20 +1,32 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { CONTACT_HIGHLIGHT_SOCIALS } from '../../data/social-links';
+import { SocialIconComponent } from '../../component/social-icon/social-icon.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule, SocialIconComponent],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  standalone: true,
 })
 export class ContactComponent {
+  readonly contactSocials = CONTACT_HIGHLIGHT_SOCIALS;
+
   statusMessage: string = '';
+  isSuccessMessage = false;
+
+  get statusAlertClass(): string {
+    const base =
+      'mt-3 rounded-lg border px-3 py-2.5 text-sm font-medium';
+    return this.isSuccessMessage
+      ? `${base} border-aurora-cyan/40 bg-aurora-violet/10 text-void-text`
+      : `${base} border-red-500/50 bg-red-950/50 text-red-200`;
+  }
 
   sendEmail(form: any) {
     if (!form.valid) {
-      this.showMessage('Please enter all the fields');
+      this.showMessage('Please enter all the fields', false);
       return;
     }
     emailjs.send(
@@ -28,12 +40,12 @@ export class ContactComponent {
       'mIoRfYcjQzw69EPE6' 
     )
     .then((result: EmailJSResponseStatus) => {
-      this.showMessage('Message was sent successfully!');
+      this.showMessage("Message sent successfully. I'll get back to you soon.", true);
       this.sendAutoReply(form.value.name, form.value.email);
       form.resetForm(); 
     })
     .catch((error: any) => {
-      this.showMessage('Problem in sending the mail');
+      this.showMessage('Problem in sending the mail', false);
     });
   }
 
@@ -55,10 +67,12 @@ export class ContactComponent {
     });
   }
 
-  showMessage(message: string) {
+  showMessage(message: string, success: boolean) {
     this.statusMessage = message;
+    this.isSuccessMessage = success;
+    const ms = success ? 6500 : 5000;
     setTimeout(() => {
       this.statusMessage = '';
-    }, 4000);
+    }, ms);
   }
 }

@@ -1,10 +1,190 @@
-<div class="resume-container">
-  
-    <iframe  class="left-image"
-      src="/pdfs/sridhar-resume.pdf" 
-      width="100%" 
-      height="400px" 
-      style="border:none;">
-    </iframe>
- 
+<div
+  class="w-full min-w-0 overflow-hidden rounded-3xl border border-white/10 bg-void-card/95 shadow-card ring-1 ring-white/5 backdrop-blur-md"
+>
+  <!-- Toolbar -->
+  <div
+    class="flex flex-col gap-3 border-b border-white/10 bg-gradient-to-r from-void-elevated/90 to-aurora-violet/10 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5 lg:px-6"
+  >
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-aurora-cyan">Resume</p>
+      <h1
+        class="mt-1 bg-gradient-to-r from-aurora-violet to-aurora-cyan bg-clip-text text-xl font-bold text-transparent sm:text-2xl"
+      >
+        Maloth Sridhar Varma
+      </h1>
+      <p class="mt-0.5 text-sm text-void-muted">Software Engineer</p>
+    </div>
+    <button
+      type="button"
+      (click)="downloadResume()"
+      class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-aurora-violet to-aurora-cyan px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-aurora-cyan/50 focus:ring-offset-2 focus:ring-offset-void-card"
+    >
+      <i class="bi bi-download" aria-hidden="true"></i>
+      Download PDF
+    </button>
+  </div>
+
+  <div class="space-y-6 px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8">
+    <!-- Contact strip -->
+    <section class="flex flex-wrap gap-x-4 gap-y-2 border-b border-white/10 pb-6 text-sm text-void-muted">
+      <a href="tel:+917981841338" class="hover:text-aurora-cyan">+91 7981841338</a>
+      <span class="hidden text-void-faint sm:inline" aria-hidden="true">·</span>
+      <a href="mailto:malothsridharvarma@gmail.com" class="break-all hover:text-aurora-cyan"
+        >malothsridharvarma&#64;gmail.com</a
+      >
+    </section>
+
+    <!-- Summary -->
+    <section>
+      <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Summary</h2>
+      <p class="text-sm leading-relaxed text-void-muted sm:text-base">
+        Software Engineer with 1+ year of experience in building fintech compliance and screening platforms using Java,
+        Spring Boot, and Angular. Strong expertise in designing secure, scalable RESTful APIs, integrating third-party
+        sanctions and risk data providers, and delivering production-grade enterprise systems for financial compliance and
+        transaction monitoring.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2 class="mb-4 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Experience</h2>
+      <ul class="space-y-6">
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-semibold text-void-text">Software Engineer (Full-Time)</h3>
+            <span class="text-xs font-medium text-void-faint">July 2025 – Present</span>
+          </div>
+          <p class="text-sm text-aurora-cyan">Effiya Technologies, Noida, Uttar Pradesh</p>
+          <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-void-muted">
+            <li>
+              Developed an AI Coach platform used by internal teams to assess competencies and receive personalized
+              learning guidance, improving training effectiveness and employee engagement.
+            </li>
+            <li>
+              Designed and developed RESTful APIs and a scalable Angular-based UI for a SWIFT message screening system
+              (MT103, MT202), supporting configurable rules and validations for compliance workflows.
+            </li>
+            <li>
+              Integrated compliance screening with WorldCheck, LexisNexis, and Dow Jones, improving sanctions and risk
+              detection accuracy and reducing manual review effort.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-semibold text-void-text">Software Engineer Intern</h3>
+            <span class="text-xs font-medium text-void-faint">Jan 2025 – June 2025</span>
+          </div>
+          <p class="text-sm text-aurora-cyan">Effiya Technologies, Noida, Uttar Pradesh</p>
+          <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-void-muted">
+            <li>
+              Contributed to the Suspicious Transaction Reporting (STR) module for financial compliance, enabling
+              identification and reporting of suspicious transactions in a Case Management System.
+            </li>
+            <li>
+              Developed dynamic Angular forms for customer, account, and entity details with real-time validation and
+              mandatory checks, and implemented backend APIs using Java and Spring Boot for data retrieval, XML generation,
+              and XSD-based validation.
+            </li>
+            <li>
+              Built an automated XML error correction and revalidation workflow, improving validation efficiency by 35%.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="mb-4 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Projects</h2>
+      <ul class="space-y-5">
+        <li class="border-l-2 border-aurora-violet/50 pl-4">
+          <h3 class="font-semibold text-void-text">Employee Management System</h3>
+          <p class="mt-1 text-xs font-medium uppercase tracking-wide text-void-faint">
+            Angular · REST APIs · Spring Boot
+          </p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-void-muted">
+            <li>
+              Built a full-stack Employee Management System using Angular and Spring Boot to manage departments,
+              designations, and employee records with secure access control.
+            </li>
+            <li>Implemented secure JWT Authentication and Role-Based Access Control (RBAC) using Spring Security.</li>
+            <li>
+              Enabled complete CRUD operations and an interactive Dashboard for efficient organizational data management.
+            </li>
+          </ul>
+        </li>
+        <li class="border-l-2 border-aurora-cyan/50 pl-4">
+          <h3 class="font-semibold text-void-text">Flavor Haven</h3>
+          <p class="mt-1 text-xs font-medium uppercase tracking-wide text-void-faint">
+            Angular · REST APIs · Spring Boot
+          </p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-void-muted">
+            <li>
+              Developed an interactive recipe discovery platform using Angular and Spring Boot, allowing users to browse
+              meals, cuisines, and detailed recipes.
+            </li>
+            <li>
+              Implemented advanced search and filtering based on ingredients, minimum and maximum calorie ranges, and
+              other criteria to help users find personalized recipes efficiently.
+            </li>
+            <li>
+              Built personalized features such as Add to Liked and Remove from Liked, improving user engagement and
+              retention.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="mb-4 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Technical skills</h2>
+      <dl class="grid gap-4 text-sm sm:grid-cols-2">
+        <div>
+          <dt class="font-semibold text-aurora-violet">Backend</dt>
+          <dd class="mt-1 text-void-muted">Java, Spring Boot, REST APIs, Spring Security, JWT, RBAC</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-aurora-violet">Frontend</dt>
+          <dd class="mt-1 text-void-muted">Angular, TypeScript, JavaScript, HTML, CSS, PrimeNG</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-aurora-violet">Databases</dt>
+          <dd class="mt-1 text-void-muted">MySQL, SQL Server</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-aurora-violet">Tools &amp; platforms</dt>
+          <dd class="mt-1 text-void-muted">Git, VS Code, Eclipse, Postman</dd>
+        </div>
+      </dl>
+      <p class="mt-4 text-sm text-void-muted">
+        <span class="font-semibold text-aurora-cyan">Computer science fundamentals:</span> Data Structures and Algorithms,
+        Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems
+      </p>
+    </section>
+
+    <!-- Achievements -->
+    <section>
+      <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Problem solving &amp; achievements</h2>
+      <ul class="list-disc space-y-1 pl-5 text-sm text-void-muted">
+        <li>
+          Solved 1500+ Data Structures and Algorithms problems across LeetCode, GeeksforGeeks, Codechef and Codeforces.
+        </li>
+        <li>4-star coder on GeeksforGeeks and 3-star coder on CodeChef.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section class="border-t border-white/10 pt-6">
+      <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-aurora-cyan">Education</h2>
+      <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+        <div>
+          <h3 class="font-semibold text-void-text">B.Tech in Information Technology (CGPA: 8.31)</h3>
+          <p class="text-sm text-void-muted">Indian Institute of Information Technology, Allahabad</p>
+        </div>
+        <span class="text-xs font-medium text-void-faint">July 2021 – June 2025</span>
+      </div>
+    </section>
+  </div>
 </div>

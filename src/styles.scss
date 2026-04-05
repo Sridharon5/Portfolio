@@ -1,4 +1,30 @@
-body {
-  padding-top: 6rem; 
-  background-color: #f8f9ff;
+@use './styles/variables.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply min-h-screen text-ink antialiased;
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color: var(--color-page-base);
+    background-image: var(--bg-mesh-layer);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
 }

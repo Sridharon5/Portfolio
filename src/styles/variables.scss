@@ -1,0 +1,42 @@
+// Purple tech gradient — startup / AI portfolio dark theme
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --color-page-base: #0b0f19;
+  --bg-mesh-layer:
+    radial-gradient(ellipse 100% 90% at 0% -15%, rgb(124 58 237 / 0.28), transparent 55%),
+    radial-gradient(ellipse 85% 70% at 100% 5%, rgb(6 182 212 / 0.18), transparent 52%),
+    radial-gradient(ellipse 55% 45% at 50% 100%, rgb(124 58 237 / 0.12), transparent 55%),
+    linear-gradient(180deg, #0b0f19 0%, #0d1324 40%, #0b0f19 100%);
+
+  --color-page-bg: #0b0f19;
+  --color-surface: #111827;
+  --color-surface-soft: #1f2937;
+  --color-muted: #1f2937;
+
+  --color-nav-bg: rgb(17 24 39 / 0.72);
+  --color-nav-bg-mobile: rgb(17 24 39 / 0.96);
+  --color-nav-border: rgb(255 255 255 / 0.08);
+  --shadow-nav: 0 1px 0 rgb(255 255 255 / 0.06), 0 16px 48px -12px rgb(0 0 0 / 0.55);
+
+  --color-brand: #7c3aed;
+  --color-brand-hover: #6d28d9;
+  --color-brand-fg: #ffffff;
+  --color-brand-muted: rgb(124 58 237 / 0.22);
+
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
+  --color-accent-fg: #0b0f19;
+  --color-accent-muted: rgb(6 182 212 / 0.18);
+
+  --color-ink: #e5e7eb;
+  --color-subtle: #9ca3af;
+  --color-border: rgb(148 163 184 / 0.14);
+
+  --color-danger: #f87171;
+  --color-success: #06b6d4;
+
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 0.05), 0 24px 48px -20px rgb(0 0 0 / 0.55);
+  --shadow-card-hover: 0 0 0 1px rgb(124 58 237 / 0.25), 0 28px 56px -24px rgb(0 0 0 / 0.65);
+  --shadow-hero: 0 0 80px -24px rgb(124 58 237 / 0.35);
+}

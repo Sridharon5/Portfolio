@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { RESUME_DOWNLOAD_URL } from '../../data/resume-download';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  standalone: true,
 })
 export class HomeComponent {
+  readonly heroImageUrl =
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=88';
 
+  downloadResume(): void {
+    const a = document.createElement('a');
+    a.href = RESUME_DOWNLOAD_URL;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.click();
+  }
 }

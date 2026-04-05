@@ -1,4 +1,8 @@
-<div class="container-fluid">
+<div
+  class="flex min-h-screen w-full flex-col overflow-x-hidden pt-[4.65rem] md:pt-[5.1rem]"
+>
   <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
+  <main class="mx-auto flex min-h-0 w-full min-w-0 max-w-7xl flex-1 flex-col px-3 pb-8 sm:px-4 sm:pb-10">
+    <router-outlet></router-outlet>
+  </main>
 </div>

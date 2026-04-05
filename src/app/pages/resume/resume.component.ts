@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
+import { RESUME_DOWNLOAD_URL } from '../../data/resume-download';
 
 @Component({
   selector: 'app-resume',
   imports: [],
   templateUrl: './resume.component.html',
-  styleUrl: './resume.component.scss'
+  standalone: true,
 })
 export class ResumeComponent {
-   downloadResume() {
-    const link = document.createElement('a');
-    link.href = '/pdfs/sridhar-resume.pdf'; 
-    link.download = 'Maloth_Sridhar_Varma_Resume.pdf';
-    link.click();
+  downloadResume(): void {
+    const a = document.createElement('a');
+    a.href = RESUME_DOWNLOAD_URL;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.click();
   }
 }

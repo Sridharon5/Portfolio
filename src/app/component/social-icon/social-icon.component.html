@@ -1,0 +1,14 @@
+@switch (kind()) {
+  @case ('linkedin') {
+    <i class="bi bi-linkedin shrink-0" [class]="className()" aria-hidden="true"></i>
+  }
+  @case ('github') {
+    <i class="bi bi-github shrink-0" [class]="className()" aria-hidden="true"></i>
+  }
+  @case ('leetcode') {
+    <i class="bi bi-lightning-charge-fill shrink-0" [class]="className()" aria-hidden="true"></i>
+  }
+  @case ('codechef') {
+    <i class="bi bi-trophy-fill shrink-0" [class]="className()" aria-hidden="true"></i>
+  }
+}
