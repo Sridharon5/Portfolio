@@ -36,32 +36,6 @@
         </ul>
       </section>
     }
-
-    <section
-      class="flex flex-col rounded-2xl border border-aurora-violet/25 bg-gradient-to-br from-aurora-violet/10 via-void-card to-aurora-cyan/10 p-4 shadow-glow ring-1 ring-aurora-cyan/15 sm:p-5 md:col-span-2 xl:col-span-3"
-    >
-      <h2 class="mb-5 flex items-center gap-2 text-lg font-semibold text-void-text">
-        <span
-          class="flex h-10 w-10 items-center justify-center rounded-lg bg-void-elevated text-aurora-cyan ring-1 ring-aurora-cyan/30"
-        >
-          <i class="bi bi-stars" aria-hidden="true"></i>
-        </span>
-        Problem solving &amp; achievements
-      </h2>
-      <ul class="grid list-none gap-3 p-0 sm:grid-cols-1 md:grid-cols-3">
-        @for (item of achievements; track item.label) {
-          <li
-            class="flex items-start gap-3 rounded-xl border border-white/10 bg-void-elevated/80 px-4 py-3 text-sm text-void-muted shadow-sm"
-          >
-            <span
-              class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-aurora-violet/20 text-aurora-cyan ring-1 ring-aurora-violet/25"
-            >
-              <i class="{{ item.icon }} text-base" aria-hidden="true"></i>
-            </span>
-            <span class="leading-snug">{{ item.label }}</span>
-          </li>
-        }
-      </ul>
-    </section>
+  
   </div>
 </div>
