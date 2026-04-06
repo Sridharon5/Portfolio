@@ -33,13 +33,12 @@
       class="order-last flex w-full min-w-0 flex-col gap-0.5 border-t border-white/10 bg-[color:var(--color-nav-bg-mobile)] py-3 md:order-none md:flex md:w-auto md:min-w-0 md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-0.5 md:border-0 md:bg-transparent md:py-0 lg:gap-1"
       [class.max-md:hidden]="!menuOpen"
     >
-      @for (item of navItems; track item.link) {
+      @for (item of navItems; track item.route) {
         <li class="px-2 md:px-0">
           <a
-            [routerLink]="item.link"
-            routerLinkActive="bg-gradient-to-r from-aurora-violet to-aurora-cyan text-white shadow-glow hover:from-aurora-violet hover:to-aurora-cyan"
-            [routerLinkActiveOptions]="{ exact: item.link === '/home' }"
-            class="block rounded-lg px-4 py-2 text-left text-sm font-medium text-void-muted transition-colors duration-200 hover:bg-white/5 hover:text-void-text md:inline-block"
+            [routerLink]="item.route"
+            [class]="navItemLinkClass(item)"
+            [attr.aria-current]="isNavItemActive(item) ? 'page' : null"
             (click)="menuOpen = false"
           >
             {{ item.label }}
@@ -49,8 +48,8 @@
     </ul>
     <a
       routerLink="/contact"
-      routerLinkActive="ring-2 ring-aurora-cyan/60 ring-offset-2 ring-offset-void-bg"
-      class="hidden shrink-0 whitespace-nowrap rounded-lg bg-gradient-to-r from-aurora-violet to-aurora-cyan px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 hover:shadow-glow-cyan md:inline-flex md:items-center"
+      [class]="contactDesktopClass()"
+      [attr.aria-current]="isContactActive() ? 'page' : null"
       (click)="menuOpen = false"
     >
       Get In Touch
@@ -78,7 +77,8 @@
     </div>
     <a
       routerLink="/contact"
-      class="block w-full rounded-lg bg-gradient-to-r from-aurora-violet to-aurora-cyan py-2.5 text-center text-sm font-semibold text-white transition hover:opacity-95"
+      [class]="contactMobileClass()"
+      [attr.aria-current]="isContactActive() ? 'page' : null"
       (click)="menuOpen = false"
     >
       Get In Touch

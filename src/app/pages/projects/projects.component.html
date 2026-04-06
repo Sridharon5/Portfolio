@@ -14,16 +14,23 @@
       class="rounded-2xl border border-white/10 bg-void-elevated/90 p-4 shadow-sm transition hover:border-aurora-violet/30 hover:shadow-glow sm:p-5"
     >
       <h2 class="text-lg font-bold text-void-text sm:text-xl">Employee Management System</h2>
-      <p class="mt-2 text-sm text-void-faint">Angular · REST APIs · Spring Boot</p>
-      <ul class="mt-4 space-y-2 text-sm leading-relaxed text-void-muted">
+      <p class="mt-2 text-sm text-void-faint">Angular · Spring Boot · PrimeNG</p>
+      <p class="mt-3 text-sm leading-relaxed text-void-muted">
+        A full-stack operations portal for a fictional organization: people, structure, and day-to-day tasks, with the menu
+        and screens changing by role so each persona sees what they are allowed to do.
+      </p>
+      <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-void-muted">
         <li class="flex gap-2">
           <span
             class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
             aria-hidden="true"
           ></span>
           <span
-            >Built a full-stack Employee Management System using Angular and Spring Boot to manage departments,
-            designations, and employee records with secure access control.</span
+            ><span class="font-medium text-void-text/95">Sign-in and roles.</span> Users authenticate at a dedicated login,
+            then land in an app shell with a sidebar. Everyone gets <span class="text-void-text/90">Dashboard</span> and
+            tasks; only managers and administrators see <span class="text-void-text/90">Departments</span>,
+            <span class="text-void-text/90">Designations</span>, and the full <span class="text-void-text/90">Employees</span>
+            directory.</span
           >
         </li>
         <li class="flex gap-2">
@@ -31,7 +38,12 @@
             class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
             aria-hidden="true"
           ></span>
-          <span>Implemented secure JWT Authentication and Role-Based Access Control (RBAC) using Spring Security.</span>
+          <span
+            ><span class="font-medium text-void-text/95">Dashboards.</span> Administrators and managers see
+            organization-wide metrics (counts and KPI-style cards). Individual contributors see
+            <span class="text-void-text/90">My dashboard</span>: how many tasks are open, how many are due soon, and a
+            short list of recently completed work.</span
+          >
         </li>
         <li class="flex gap-2">
           <span
@@ -39,15 +51,65 @@
             aria-hidden="true"
           ></span>
           <span
-            >Enabled complete CRUD operations and an interactive Dashboard for efficient organizational data management.</span
+            ><span class="font-medium text-void-text/95">Departments and job titles.</span> Authorized roles maintain a clean
+            org chart in software form: create, review, edit, or remove departments and designations using table-based lists
+            and modal dialogs so updates stay structured.</span
+          >
+        </li>
+        <li class="flex gap-2">
+          <span
+            class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
+            aria-hidden="true"
+          ></span>
+          <span
+            ><span class="font-medium text-void-text/95">Employee records.</span> Build and maintain the team directory:
+            assign department and job title, capture hire date, link a person to an existing user account or onboard someone
+            new, and pick their access level (employee, manager, or administrator) when adding them.</span
+          >
+        </li>
+        <li class="flex gap-2">
+          <span
+            class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
+            aria-hidden="true"
+          ></span>
+          <span
+            ><span class="font-medium text-void-text/95">Tasks.</span> The sidebar label switches between
+            <span class="text-void-text/90">My tasks</span> and <span class="text-void-text/90">Tasks</span> depending on
+            permissions. Team members track assigned work with priorities and status; leaders get a broader view suitable
+            for assigning and updating work items using sortable, filterable tables and detail dialogs.</span
           >
         </li>
       </ul>
+
+      <div
+        class="mt-5 rounded-xl border border-white/10 bg-void-bg/60 px-3 py-3 text-sm text-void-muted sm:px-4 sm:py-3.5"
+      >
+        <p class="text-xs font-semibold uppercase tracking-wide text-aurora-cyan">Try the demo</p>
+        <p class="mt-2 text-xs text-void-faint">Use any row below on the login screen (password is the same for each).</p>
+        <dl class="mt-3 grid gap-2 sm:grid-cols-3">
+          <div class="rounded-lg border border-white/10 bg-void-elevated/50 px-2.5 py-2">
+            <dt class="text-xs font-medium text-void-text">Employee view</dt>
+            <dd class="mt-1 font-mono text-xs text-void-muted"><span class="text-void-faint">User</span> employee</dd>
+            <dd class="font-mono text-xs text-void-muted"><span class="text-void-faint">Password</span> admin</dd>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-void-elevated/50 px-2.5 py-2">
+            <dt class="text-xs font-medium text-void-text">Manager view</dt>
+            <dd class="mt-1 font-mono text-xs text-void-muted"><span class="text-void-faint">User</span> manager</dd>
+            <dd class="font-mono text-xs text-void-muted"><span class="text-void-faint">Password</span> admin</dd>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-void-elevated/50 px-2.5 py-2">
+            <dt class="text-xs font-medium text-void-text">Admin view</dt>
+            <dd class="mt-1 font-mono text-xs text-void-muted"><span class="text-void-faint">User</span> Admin</dd>
+            <dd class="font-mono text-xs text-void-muted"><span class="text-void-faint">Password</span> admin</dd>
+          </div>
+        </dl>
+      </div>
+
       <a
-        href="https://employee-management-frontend-nfmf-4qnl4dmto.vercel.app/"
+        href="https://my-employee-management.vercel.app/login"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-aurora-cyan underline-offset-4 hover:text-aurora-violet hover:underline"
+        class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-aurora-cyan underline-offset-4 hover:text-aurora-violet hover:underline"
       >
         Live demo
         <span aria-hidden="true">→</span>
@@ -58,16 +120,22 @@
       class="rounded-2xl border border-white/10 bg-void-elevated/90 p-4 shadow-sm transition hover:border-aurora-violet/30 hover:shadow-glow sm:p-5"
     >
       <h2 class="text-lg font-bold text-void-text sm:text-xl">Flavor Haven</h2>
-      <p class="mt-2 text-sm text-void-faint">Angular · REST APIs · Spring Boot</p>
-      <ul class="mt-4 space-y-2 text-sm leading-relaxed text-void-muted">
+      <p class="mt-2 text-sm text-void-faint">Angular · Spring Boot</p>
+      <p class="mt-3 text-sm leading-relaxed text-void-muted">
+        A food-discovery and planning product: browse and search a large recipe catalog, save what you love, and lay out
+        meals across the week—wrapped in a simple signed-in experience with Home, Search, Meal Planner, and Liked in the
+        sidebar.
+      </p>
+      <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-void-muted">
         <li class="flex gap-2">
           <span
             class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
             aria-hidden="true"
           ></span>
           <span
-            >Developed an interactive recipe discovery platform using Angular and Spring Boot, allowing users to browse
-            meals, cuisines, and detailed recipes.</span
+            ><span class="font-medium text-void-text/95">Home discovery.</span> Start from visual tiles for popular dishes,
+            meal types (breakfast, main course, snacks, drinks), and world cuisines. Each choice loads a results grid; open
+            any card for a full recipe view with rich information to support cooking decisions.</span
           >
         </li>
         <li class="flex gap-2">
@@ -76,8 +144,10 @@
             aria-hidden="true"
           ></span>
           <span
-            >Implemented advanced search and filtering based on ingredients, minimum and maximum calorie ranges, and other
-            criteria to help users find personalized recipes efficiently.</span
+            ><span class="font-medium text-void-text/95">Search and refinement.</span> The Search area supports free-text
+            lookup plus practical filters—vegetarian, vegan, keto, gluten-free, maximum cook time, and a calorie ceiling—and
+            sorting by popularity, cooking time, health score, or cost. Quick suggestions and recent searches make repeat
+            exploration faster.</span
           >
         </li>
         <li class="flex gap-2">
@@ -86,16 +156,45 @@
             aria-hidden="true"
           ></span>
           <span
-            >Built personalized features such as Add to Liked and Remove from Liked, improving user engagement and
-            retention.</span
+            ><span class="font-medium text-void-text/95">Liked recipes.</span> Signed-in users maintain a personal
+            collection: saved recipes load in one place, open into the same detail experience, and can be removed when you
+            no longer want them on the list.</span
+          >
+        </li>
+        <li class="flex gap-2">
+          <span
+            class="mt-2 h-1 w-1 shrink-0 rounded-full bg-gradient-to-b from-aurora-violet to-aurora-cyan"
+            aria-hidden="true"
+          ></span>
+          <span
+            ><span class="font-medium text-void-text/95">Meal planner.</span> Plan a real week: for each day assign
+            breakfast, lunch, and dinner by searching the catalog and slotting recipes. Move between weeks, persist your
+            plan, and reuse saved week templates so recurring planning takes fewer clicks.</span
           >
         </li>
       </ul>
+
+      <div
+        class="mt-5 rounded-xl border border-white/10 bg-void-bg/60 px-3 py-3 text-sm text-void-muted sm:px-4 sm:py-3.5"
+      >
+        <p class="text-xs font-semibold uppercase tracking-wide text-aurora-cyan">Try the demo</p>
+        <dl class="mt-3 flex flex-wrap gap-4">
+          <div>
+            <dt class="text-xs text-void-faint">Username</dt>
+            <dd class="font-mono text-sm text-void-text">sridhar</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-void-faint">Password</dt>
+            <dd class="font-mono text-sm text-void-text">admin</dd>
+          </div>
+        </dl>
+      </div>
+
       <a
-        href="https://flavor-heaven.vercel.app/"
+        href="https://flavor-heaven.vercel.app/login"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-aurora-cyan underline-offset-4 hover:text-aurora-violet hover:underline"
+        class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-aurora-cyan underline-offset-4 hover:text-aurora-violet hover:underline"
       >
         Live demo
         <span aria-hidden="true">→</span>
