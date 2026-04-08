@@ -36,20 +36,6 @@
             >
           </a>
         </li>
-        @for (s of contactSocials; track s.href) {
-          <li>
-            <a
-              [href]="s.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex w-full min-w-0 items-center gap-2.5 rounded-lg border border-white/10 bg-void-elevated/80 px-3 py-2 text-sm text-void-text transition hover:border-aurora-cyan/40 hover:bg-void-elevated"
-              [attr.aria-label]="s.label + ' (opens in a new tab)'"
-            >
-              <app-social-icon [kind]="s.icon" />
-              <span class="min-w-0 font-medium">{{ s.label }}</span>
-            </a>
-          </li>
-        }
       </ul>
     </header>
 

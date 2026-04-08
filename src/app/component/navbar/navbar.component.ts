@@ -1,7 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { SOCIAL_PROFILES } from '../../data/social-links';
-import { SocialIconComponent } from '../social-icon/social-icon.component';
 
 export type NavItem = {
   label: string;
@@ -11,7 +9,7 @@ export type NavItem = {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  imports: [RouterModule, SocialIconComponent],
+  imports: [RouterModule],
   standalone: true,
 })
 export class NavbarComponent {
@@ -19,7 +17,6 @@ export class NavbarComponent {
 
   menuOpen = false;
 
-  readonly socials = SOCIAL_PROFILES;
 
   readonly navItems: NavItem[] = [
     { label: 'Home', route: '/home' },

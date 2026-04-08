@@ -60,21 +60,6 @@
     class="border-t border-white/10 bg-[color:var(--color-nav-bg-mobile)] px-3 py-2.5 backdrop-blur-xl md:hidden"
     [class.hidden]="!menuOpen"
   >
-    <div class="mb-3 flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Social profiles">
-      @for (s of socials; track s.href) {
-        <a
-          [href]="s.href"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-void-elevated/50 px-3 py-2 text-xs font-medium text-void-text transition hover:border-aurora-cyan/35"
-          [attr.aria-label]="s.label + ' (opens in a new tab)'"
-          (click)="menuOpen = false"
-        >
-          <app-social-icon [kind]="s.icon" className="text-sm text-aurora-cyan" />
-          {{ s.label }}
-        </a>
-      }
-    </div>
     <a
       routerLink="/contact"
       [class]="contactMobileClass()"

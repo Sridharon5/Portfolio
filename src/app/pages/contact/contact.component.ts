@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { CONTACT_HIGHLIGHT_SOCIALS } from '../../data/social-links';
-import { SocialIconComponent } from '../../component/social-icon/social-icon.component';
-
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, SocialIconComponent],
+  imports: [FormsModule],
   templateUrl: './contact.component.html',
   standalone: true,
 })
 export class ContactComponent {
-  readonly contactSocials = CONTACT_HIGHLIGHT_SOCIALS;
+
 
   statusMessage: string = '';
   isSuccessMessage = false;
